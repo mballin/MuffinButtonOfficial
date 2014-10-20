@@ -46,8 +46,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func factoryButtonWasTapped(sender: AnyObject) {
-        if (baconNum >= 10) {
-            baconNum -= 10
+        if (baconNum >= 100) {
+            baconNum -= 100
             factoryNum++
             updateLabels()
         }

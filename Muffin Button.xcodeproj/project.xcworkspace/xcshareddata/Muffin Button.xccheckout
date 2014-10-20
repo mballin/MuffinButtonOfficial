@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CF480476-BFDE-4FB0-BBFB-89FA324D33B5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Muffin Button</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</key>
+		<string>https://github.com/Mateen101/MuffinButton.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Muffin Button.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Mateen101/MuffinButton.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Muffin-Button</string>
+		</dict>
+	</array>
+</dict>
+</plist>

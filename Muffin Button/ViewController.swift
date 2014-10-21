@@ -5,6 +5,7 @@
 //  Created by Mateen Rabbani on 10/3/14.
 //  Copyright (c) 2014 RaBallin. All rights reserved.
 //
+//testing merge to master copy
 
 import UIKit
 
@@ -34,7 +35,6 @@ class ViewController: UIViewController {
         
         muffinNum++
         updateLabels()
-//this is a stupid comment
     }
 
     @IBAction func baconButtonWasTapped(sender: AnyObject) {
@@ -47,13 +47,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func factoryButtonWasTapped(sender: AnyObject) {
-<<<<<<< HEAD
-        if (baconNum >= 1000) {
-            baconNum -= 1000
-=======
         if (baconNum >= 10) {
             baconNum -= 10
->>>>>>> Muffinstupidtest
             factoryNum++
             updateLabels()
         }

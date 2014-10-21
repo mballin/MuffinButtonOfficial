@@ -5,6 +5,7 @@
 //  Created by Mateen Rabbani on 10/3/14.
 //  Copyright (c) 2014 RaBallin. All rights reserved.
 //
+//testing merge to master copy
 
 import UIKit
 
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
         muffinNum++
         updateLabels()
     }
-    
+
     @IBAction func baconButtonWasTapped(sender: AnyObject) {
         if (muffinNum >= 10) {
             muffinNum -= 10

@@ -34,8 +34,9 @@ class ViewController: UIViewController {
         
         muffinNum++
         updateLabels()
+//this is a stupid comment
     }
-    
+
     @IBAction func baconButtonWasTapped(sender: AnyObject) {
         if (muffinNum >= 10) {
             muffinNum -= 10
@@ -46,8 +47,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func factoryButtonWasTapped(sender: AnyObject) {
+<<<<<<< HEAD
         if (baconNum >= 1000) {
             baconNum -= 1000
+=======
+        if (baconNum >= 10) {
+            baconNum -= 10
+>>>>>>> Muffinstupidtest
             factoryNum++
             updateLabels()
         }

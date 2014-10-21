@@ -34,8 +34,9 @@ class ViewController: UIViewController {
         
         muffinNum++
         updateLabels()
+//this is a stupid comment
     }
-    
+
     @IBAction func baconButtonWasTapped(sender: AnyObject) {
         if (muffinNum >= 10) {
             muffinNum -= 10

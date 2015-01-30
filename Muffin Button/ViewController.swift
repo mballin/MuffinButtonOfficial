@@ -22,7 +22,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var FactoryCounter: UILabel!
     
+    @IBOutlet weak var FactoryUpgradeButton: UIButton!
+    
     @IBOutlet weak var ShopButton: UIButton!
+    
+    @IBOutlet weak var SuperConverterMB: UIButton!
+    
+    @IBOutlet weak var MuffinToBaconFactoryButton: UIButton!
+    
+    //@IBOutlet weak var ShopButton: UIButton!
     
     var muffinNum = 0
     
@@ -30,8 +38,13 @@ class ViewController: UIViewController {
     
     var factoryNum = 0
     
+    var factoryInterval = 1.0
+    
+    var factoryIntervalTappedNumber = 0
+    
+    var muffinToBaconConverterBoolean = true
+    
     @IBAction func muffinButtonWasTapped(sender: AnyObject) {
-        
         muffinNum++
         updateLabels()
     }
@@ -50,6 +63,37 @@ class ViewController: UIViewController {
             baconNum -= 10
             factoryNum++
             updateLabels()
+        }
+    }
+    
+    @IBAction func factoryUpgradeButtonWasTapped(sender: AnyObject) {
+        if (factoryIntervalTappedNumber <= 50) {
+            if (baconNum >= 100) {
+                baconNum -= 100
+                factoryInterval = factoryInterval - factoryInterval/10
+                factoryIntervalTappedNumber++
+                factoryTimer()
+            }
+        } else {
+            FactoryUpgradeButton.enabled = false
+        }
+        updateLabels()
+    }
+    
+    @IBAction func SuperConverterMBWasTapped(sender: AnyObject) {
+        if (muffinNum >= 20) {
+            var baconNumTwo = baconNum
+            baconNum = muffinNum/10 + baconNum
+            baconNum -= baconNumTwo/2
+            muffinNum = muffinNum % 10
+            updateLabels()
+        }
+    }
+    
+    @IBAction func MuffinToBaconFactoryButtonWasTapped(sender: AnyObject) {
+        if (baconNum >= 10000) {
+            baconNum -= 10000
+        muffinToBaconConverterBoolean = false
         }
     }
     
@@ -78,22 +122,63 @@ class ViewController: UIViewController {
         } else if (muffinNum > 1) {
             MuffinCounter.text = "You have: \(String(muffinNum)) muffins."
         }
+        buttonHiding()
     }
     
     func factoryTimer () {
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("upgradeTimer"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(factoryInterval, target: self, selector: Selector("upgradeTimer"), userInfo: nil, repeats: true)
     }
     
     func upgradeTimer() {
-        if factoryNum>=1 {
-        muffinNum+=factoryNum
-        updateLabels()
+        if (muffinToBaconConverterBoolean) {
+            if (factoryNum>=1) {
+                muffinNum+=factoryNum
+                updateLabels()
+            }
+            } else if (muffinToBaconConverterBoolean == false) {
+                if (factoryNum>=1) {
+                    baconNum+=factoryNum
+                    updateLabels()
+                    MuffinToBaconFactoryButton.enabled = false
+            }
+        }
+    }
+    
+    func buttonHiding () {
+        if (muffinNum >= 10) {
+            BaconButton.enabled = true
+        } else {
+            BaconButton.enabled = false
+        }
+        if (baconNum >= 10) {
+            FactoryButton.enabled = true
+        } else {
+            FactoryButton.enabled = false
+        }
+        if (baconNum >= 100) {
+            FactoryUpgradeButton.enabled = true
+        } else {
+            FactoryUpgradeButton.enabled = false
+        }
+        if (baconNum >= 10000) {
+            MuffinToBaconFactoryButton.enabled = true
+        } else {
+            MuffinToBaconFactoryButton.enabled = false
+        }
+        if (muffinNum >= 20) {
+            SuperConverterMB.enabled = true
+        } else {
+            SuperConverterMB.enabled = false
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         factoryTimer()
+        updateLabels()
+        buttonHiding()
+        BaconButton.enabled = false
+        FactoryButton.enabled = false
     }
 
     override func didReceiveMemoryWarning() {

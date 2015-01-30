@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Shop View Controller-->
         <scene sceneID="wkP-FP-Ops">
             <objects>
-                <viewController id="mzv-MI-tOm" sceneMemberID="viewController">
+                <viewController id="mzv-MI-tOm" customClass="ShopViewController" customModule="Muffin_Button" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ALM-hU-Rju"/>
                         <viewControllerLayoutGuide type="bottom" id="1AF-to-6Z5"/>
@@ -19,28 +19,28 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWz-U1-LBi">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Shop" id="URH-l7-BXa">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="HK3-gx-SAO">
-                                            <connections>
-                                                <segue destination="vXZ-lx-hvc" kind="show" id="LFy-WS-86q"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Shop" id="URH-l7-BXa"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ov4-UK-nKS">
-                                <rect key="frame" x="277" y="290" width="45" height="30"/>
-                                <state key="normal" title="Bacon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gk3-WV-tlq" appends="YES" id="Kjn-B0-dMD"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="ShopSwipe" destination="gk3-WV-tlq" id="DQ1-Nc-mKc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7p9-w9-r97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="gk3-WV-tlq">
+                    <connections>
+                        <action selector="closeViewController" destination="mzv-MI-tOm" id="sPm-5Y-IMJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-229" y="361"/>
+            <point key="canvasLocation" x="828" y="-524"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -97,14 +97,45 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-gK-YHk">
-                                <rect key="frame" x="115" y="496" width="71" height="30"/>
-                                <state key="normal" title="The Shop">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-Nh-s0f">
+                                <rect key="frame" x="74" y="465" width="152" height="30"/>
+                                <state key="normal" title="10% Factory Upgrade">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mzv-MI-tOm" kind="show" id="yT7-tT-by7"/>
+                                    <action selector="factoryUpgradeButtonWasTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="O5B-N4-mJo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv6-B6-SbL">
+                                <rect key="frame" x="37" y="503" width="226" height="30"/>
+                                <state key="normal" title="Muffin to Bacon Super Converter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SuperConverterMBWasTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tdb-Jl-VNb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koV-Q7-lSv">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHI-Mz-Q1L">
+                                <rect key="frame" x="8" y="541" width="285" height="30"/>
+                                <state key="normal" title="Muffin Factory to Bacon Factory Upgrade">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MuffinToBaconFactoryButtonWasTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="70c-w8-cem"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjq-pu-L1t">
+                                <rect key="frame" x="29" y="20" width="37" height="30"/>
+                                <state key="normal" title="Shop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mzv-MI-tOm" kind="show" id="Pwb-JJ-nnM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,16 +147,17 @@
                         <outlet property="BaconCounter" destination="3gM-mX-7B2" id="aq8-Wl-lsT"/>
                         <outlet property="FactoryButton" destination="sOg-aA-cNd" id="S8E-Cr-LHI"/>
                         <outlet property="FactoryCounter" destination="pKI-Cu-Ial" id="sq2-mh-OjG"/>
+                        <outlet property="FactoryUpgradeButton" destination="xIa-Nh-s0f" id="Kor-RJ-Vel"/>
                         <outlet property="MuffinButton" destination="1Tm-o3-u0d" id="wka-Qt-u5u"/>
                         <outlet property="MuffinCounter" destination="8rl-xF-LsZ" id="Qug-4M-sbz"/>
-                        <outlet property="ShopButton" destination="rYp-gK-YHk" id="f7z-6I-jsq"/>
+                        <outlet property="MuffinToBaconFactoryButton" destination="NHI-Mz-Q1L" id="8M1-ZZ-UIv"/>
+                        <outlet property="ShopButton" destination="Hjq-pu-L1t" id="C76-70-2fj"/>
+                        <outlet property="SuperConverterMB" destination="Hv6-B6-SbL" id="dHS-mO-ymg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="3xm-R9-zeF"/>
-                <swipeGestureRecognizer direction="right" id="trY-WK-cVN"/>
             </objects>
-            <point key="canvasLocation" x="-229" y="-692"/>
+            <point key="canvasLocation" x="117" y="-524"/>
         </scene>
     </scenes>
     <resources>

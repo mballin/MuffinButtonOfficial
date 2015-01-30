@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class ShopViewController: UIViewController {
+    @IBAction func closeViewController() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+}

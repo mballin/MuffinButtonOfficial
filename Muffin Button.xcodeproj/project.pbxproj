@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		18295F2B19E8A93600ED2831 /* Muffin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18295F2A19E8A93600ED2831 /* Muffin.jpg */; };
 		18295F2D19E8AB8900ED2831 /* Made20bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18295F2C19E8AB8900ED2831 /* Made20bacon.png */; };
-		186015D21A7C467C00FD48CB /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186015D11A7C467C00FD48CB /* Storyboard.storyboard */; };
 		186FBB0219DF7748008E4C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FBB0119DF7748008E4C8D /* AppDelegate.swift */; };
 		186FBB0419DF7748008E4C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FBB0319DF7748008E4C8D /* ViewController.swift */; };
+		186FBB0719DF7748008E4C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186FBB0519DF7748008E4C8D /* Main.storyboard */; };
 		186FBB0919DF7748008E4C8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186FBB0819DF7748008E4C8D /* Images.xcassets */; };
 		186FBB0C19DF7748008E4C8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186FBB0A19DF7748008E4C8D /* LaunchScreen.xib */; };
 		186FBB1819DF7748008E4C8D /* Muffin_ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FBB1719DF7748008E4C8D /* Muffin_ButtonTests.swift */; };
@@ -32,11 +32,11 @@
 /* Begin PBXFileReference section */
 		18295F2A19E8A93600ED2831 /* Muffin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Muffin.jpg; path = Images.xcassets/Muffin.jpg; sourceTree = "<group>"; };
 		18295F2C19E8AB8900ED2831 /* Made20bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Made20bacon.png; sourceTree = "<group>"; };
-		186015D11A7C467C00FD48CB /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		186FBAFC19DF7748008E4C8D /* Muffin Button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muffin Button.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		186FBB0019DF7748008E4C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186FBB0119DF7748008E4C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		186FBB0319DF7748008E4C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		186FBB0619DF7748008E4C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		186FBB0819DF7748008E4C8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		186FBB0B19DF7748008E4C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		186FBB1119DF7748008E4C8D /* Muffin ButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Muffin ButtonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,11 +97,11 @@
 			children = (
 				186FBB0119DF7748008E4C8D /* AppDelegate.swift */,
 				186FBB0319DF7748008E4C8D /* ViewController.swift */,
+				186FBB0519DF7748008E4C8D /* Main.storyboard */,
 				186FBB0819DF7748008E4C8D /* Images.xcassets */,
 				186FBB0A19DF7748008E4C8D /* LaunchScreen.xib */,
 				186FBAFF19DF7748008E4C8D /* Supporting Files */,
 				1885A03919F1D86900B8E754 /* ShopViewController.swift */,
-				186015D11A7C467C00FD48CB /* Storyboard.storyboard */,
 			);
 			path = "Muffin Button";
 			sourceTree = "<group>";
@@ -212,12 +212,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186FBB0719DF7748008E4C8D /* Main.storyboard in Resources */,
 				186FBB0C19DF7748008E4C8D /* LaunchScreen.xib in Resources */,
 				18295F2B19E8A93600ED2831 /* Muffin.jpg in Resources */,
 				186FBB0919DF7748008E4C8D /* Images.xcassets in Resources */,
 				18C0DF0B19EAE5E60034E1A6 /* factory-vector-381896.jpg in Resources */,
 				18295F2D19E8AB8900ED2831 /* Made20bacon.png in Resources */,
-				186015D21A7C467C00FD48CB /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +260,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		186FBB0519DF7748008E4C8D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				186FBB0619DF7748008E4C8D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		186FBB0A19DF7748008E4C8D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

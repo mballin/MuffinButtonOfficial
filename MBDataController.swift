@@ -25,9 +25,9 @@ class MBDataController {
     
     //Muffin
     
-    var muffinsOwned: Int
-    var muffinMultiplier: Int
-    var muffinMultiplierPrice: Double
+    private var muffinsOwned: Int
+    private var muffinMultiplier: Int
+    private var muffinMultiplierPrice: Double
     
     func buyMuffin() {
         muffinsOwned += 1*getMuffinMultiplier()
@@ -47,16 +47,22 @@ class MBDataController {
     
     /// Adds one to the muffin multiplier, and raises the price of later multipliers.
     func purchaseMuffinMultiplier() {
-        addToMuffinMultiplier()
-        muffinsOwned -= Int(muffinMultiplierPrice)
-        muffinMultiplierPrice *= 1.2
+        if (Double(getbaconOwned()) >= getMuffinMultiplierPrice()) {
+            addToMuffinMultiplier()
+            muffinMultiplierPrice *= 1.2
+            baconOwned -= Int(muffinMultiplierPrice)
+        }
+    }
+    
+    func getMuffinMultiplierPrice() -> Double{
+        return muffinMultiplierPrice
     }
     
     //Bacon
     
-    var baconOwned: Int
-    var baconMultiplier: Int
-    var baconMultiplierPrice: Double
+    private var baconOwned: Int
+    private var baconMultiplier: Int
+    private var baconMultiplierPrice: Double
     
     func buybacon() {
         if (muffinsOwned >= 10){
@@ -86,7 +92,7 @@ class MBDataController {
     
     //Factories
     
-    var factoriesOwned: Int
+    private var factoriesOwned: Int
     
     func buyfactory() {
         if (baconOwned >= 10){

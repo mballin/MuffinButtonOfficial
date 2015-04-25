@@ -20,6 +20,8 @@ class ShopViewController: UIViewController {
     @IBOutlet weak var muffinLabel: UILabel!
     @IBOutlet weak var baconLabel: UILabel!
     @IBOutlet weak var factoryLabel: UILabel!
+    @IBOutlet weak var multipliersLabel: UILabel!
+    @IBOutlet weak var muffinMultiplierCost: UILabel!
     
     @IBAction func ShopBackButtonWasTapped(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -27,8 +29,9 @@ class ShopViewController: UIViewController {
     }
     
     @IBAction func buyMultiplierButtonWasTapped(sender: AnyObject) {
-        toPass.addToMuffinMultiplier()
+        toPass.purchaseMuffinMultiplier()
         //NOTE: need to add price here, maybe display and also display current multiplier
+        updateLabels()
     }
     
     override func viewDidLoad() {
@@ -67,6 +70,23 @@ class ShopViewController: UIViewController {
         } else if (toPass.getfactoriesOwned() > 1) {
             factoryLabel.text = "You have: \(String(toPass.getfactoriesOwned())) factories."
         }
+        
+        //Muffin Multipliers
+        if (toPass.getMuffinMultiplier() == 0) {
+            multipliersLabel.text = "You have no multiplier."
+        } else if (toPass.getMuffinMultiplier() == 1) {
+            multipliersLabel.text = "You have: \(String(toPass.getMuffinMultiplier())) multiplier."
+        } else if (toPass.getMuffinMultiplier() > 1) {
+            multipliersLabel.text = "You have: \(String(toPass.getMuffinMultiplier())) multipliers."
+        }
+        
+        //Multiplier Price
+        if (toPass.getMuffinMultiplier() == 1) {
+            muffinMultiplierCost.text = "You have: " + String(format: "%.1f", toPass.getMuffinMultiplierPrice()) + " multiplier."
+        } else if (toPass.getMuffinMultiplier() > 1) {
+            muffinMultiplierCost.text = "You have: " + String(format: "%.1f", toPass.getMuffinMultiplierPrice()) + " multipliers."
+        }
+
         
     }
     

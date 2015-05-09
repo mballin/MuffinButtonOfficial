@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CF480476-BFDE-4FB0-BBFB-89FA324D33B5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Muffin Button</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>017A826C91E79A444510C313638344B7BB985516</key>
 		<string>https://github.com/mballin/MuffinButtonOfficial.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Muffin Button.xcodeproj/project.xcworkspace</string>
+	<string>Muffin Button.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>017A826C91E79A444510C313638344B7BB985516</key>

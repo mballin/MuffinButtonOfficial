@@ -24,7 +24,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ShopButton: UIButton!
     
+    @IBOutlet weak var CheatButton: UIButton!
+    
     let data = MBDataController()
+    
+    
+    
+    @IBAction func cheatButtonWasTapped(sender: AnyObject) {
+        for _ in 1...1000 {
+            for _ in 1...20 {
+            data.buyMuffin()
+            }
+            data.buybacon()
+        }
+    }
     
     @IBAction func muffinButtonWasTapped(sender: AnyObject) {
         data.buyMuffin()

@@ -47,15 +47,15 @@ class MBDataController {
     
     /// Adds one to the muffin multiplier, and raises the price of later multipliers.
     func purchaseMuffinMultiplier() {
-        if (Double(getbaconOwned()) >= getMuffinMultiplierPrice()) {
-            addToMuffinMultiplier()
-            muffinMultiplierPrice *= 1.2
+        if (getbaconOwned() >= getMuffinMultiplierPrice()) {
             baconOwned -= Int(muffinMultiplierPrice)
+            muffinMultiplierPrice *= 1.2
+            addToMuffinMultiplier()
         }
     }
     
-    func getMuffinMultiplierPrice() -> Double{
-        return muffinMultiplierPrice
+    func getMuffinMultiplierPrice() -> Int{
+        return Int(floor(muffinMultiplierPrice))
     }
     
     //Bacon

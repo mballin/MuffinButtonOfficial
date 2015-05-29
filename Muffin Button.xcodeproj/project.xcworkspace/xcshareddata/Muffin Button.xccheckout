@@ -10,31 +10,31 @@
 	<string>Muffin Button</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</key>
-		<string>https://github.com/Mateen101/MuffinButton.git</string>
+		<key>017A826C91E79A444510C313638344B7BB985516</key>
+		<string>https://github.com/mballin/MuffinButtonOfficial.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Muffin Button.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</key>
+		<key>017A826C91E79A444510C313638344B7BB985516</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Mateen101/MuffinButton.git</string>
+	<string>https://github.com/mballin/MuffinButtonOfficial.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</string>
+	<string>017A826C91E79A444510C313638344B7BB985516</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D08BAF6675ACAB9A0706B74D6CDF72878CB6C361</string>
+			<string>017A826C91E79A444510C313638344B7BB985516</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Muffin-Button</string>
+			<string>MuffinButtonOfficial</string>
 		</dict>
 	</array>
 </dict>

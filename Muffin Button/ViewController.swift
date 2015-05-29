@@ -24,94 +24,72 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ShopButton: UIButton!
     
-    @IBOutlet weak var CheatButton: UIButton!
+    var muffinNum = 0
     
-    let data = MBDataController()
+    var baconNum = 0
     
-    
-    
-    @IBAction func cheatButtonWasTapped(sender: AnyObject) {
-        for _ in 1...1000 {
-            for _ in 1...20 {
-            data.buyMuffin()
-            }
-            data.buybacon()
-        }
-    }
+    var factoryNum = 0
     
     @IBAction func muffinButtonWasTapped(sender: AnyObject) {
-        data.buyMuffin()
+        
+        muffinNum++
         updateLabels()
     }
     
     @IBAction func baconButtonWasTapped(sender: AnyObject) {
-        data.buybacon()
-        updateLabels()
+        if (muffinNum >= 10) {
+            muffinNum -= 10
+            baconNum++
+            updateLabels()
+            
+        }
     }
     
-    
     @IBAction func factoryButtonWasTapped(sender: AnyObject) {
-        data.buyfactory()
-        updateLabels()
+        if (baconNum >= 10) {
+            baconNum -= 10
+            factoryNum++
+            updateLabels()
+        }
     }
     
     func updateLabels() {
-        
-        //Muffins
-        
-        if (data.getMuffinsOwned() == 0) {
-            MuffinCounter.text = "You have no muffins."
-        } else if (data.getMuffinsOwned() == 1) {
-            MuffinCounter.text = "You have: \(String(data.getMuffinsOwned())) muffin."
-        } else if (data.getMuffinsOwned() > 1) {
-            MuffinCounter.text = "You have: \(String(data.getMuffinsOwned())) muffins."
-        }
-
-        //Bacon
-        
-        if (data.getbaconOwned() == 0) {
-            BaconCounter.text = "You have no bacon."
-        } else if (data.getbaconOwned() == 1) {
-            BaconCounter.text = "You have: \(String(data.getbaconOwned())) slice of bacon."
-        } else if (data.getbaconOwned() > 1) {
-            BaconCounter.text = "You have: \(String(data.getbaconOwned())) slices of bacon."
-        }
-        
-        //Factories
-        
-        if (data.getfactoriesOwned() == 0) {
+        if (factoryNum == 0) {
             FactoryCounter.text = "You have no factories."
-        } else if (data.getfactoriesOwned() == 1) {
-            FactoryCounter.text = "You have: \(String(data.getfactoriesOwned())) factory."
-        } else if (data.getfactoriesOwned() > 1) {
-            FactoryCounter.text = "You have: \(String(data.getfactoriesOwned())) factories."
+        } else if (factoryNum == 1) {
+            FactoryCounter.text = "You have: 1 factory."
+        } else if (factoryNum > 1) {
+            FactoryCounter.text = "You have: \(String(factoryNum)) factories."
         }
         
+        if (baconNum == 0) {
+            BaconCounter.text = "You have no bacon."
+        } else if (baconNum == 1) {
+            BaconCounter.text = "You have: 1 slice of bacon."
+        } else if (baconNum > 1) {
+            BaconCounter.text = "You have: \(String(baconNum)) slices of bacon."
+        }
+        
+        if (muffinNum == 0) {
+            MuffinCounter.text = "You have no muffins."
+        } else if (muffinNum == 1) {
+            MuffinCounter.text = "You have: 1 muffin."
+            
+        } else if (muffinNum > 1) {
+            MuffinCounter.text = "You have: \(String(muffinNum)) muffins."
+        }
     }
-    
-    
-    //timers
     
     func factoryTimer () {
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("timerFunction"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("upgradeTimer"), userInfo: nil, repeats: true)
     }
     
-    func timerFunction() {
-        data.runFactories()
+    func upgradeTimer() {
+        if factoryNum>=1 {
+        muffinNum+=factoryNum
         updateLabels()
-    }
-    
-    //Passing Data to other View Controllers
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "segueToShop") {
-            var shopViewController = segue.destinationViewController as! ShopViewController
-            shopViewController.toPass = data
         }
     }
-
-    
-    //Boiler Plate for View Controller
     
     override func viewDidLoad() {
         super.viewDidLoad()

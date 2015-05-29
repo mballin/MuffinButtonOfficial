@@ -35,7 +35,6 @@ class ShopViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        toPass.buyMuffin()
         updateLabels()
     }
     
@@ -81,11 +80,7 @@ class ShopViewController: UIViewController {
         }
         
         //Multiplier Price
-        if (toPass.getMuffinMultiplier() == 1) {
-            muffinMultiplierCost.text = "You have: " + String(format: "%.1f", toPass.getMuffinMultiplierPrice()) + " multiplier."
-        } else if (toPass.getMuffinMultiplier() > 1) {
-            muffinMultiplierCost.text = "You have: " + String(format: "%.1f", toPass.getMuffinMultiplierPrice()) + " multipliers."
-        }
+            muffinMultiplierCost.text = "You will need " + String(toPass.getMuffinMultiplierPrice()) + " bacon for a multiplier."
 
         
     }

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1826A6B81ABCD8F000C64171 /* MBDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826A6B71ABCD8F000C64171 /* MBDataController.swift */; };
 		18295F2B19E8A93600ED2831 /* Muffin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18295F2A19E8A93600ED2831 /* Muffin.jpg */; };
 		18295F2D19E8AB8900ED2831 /* Made20bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18295F2C19E8AB8900ED2831 /* Made20bacon.png */; };
+		186016021A7C4A5E00FD48CB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186016011A7C4A5E00FD48CB /* DataController.swift */; };
 		186FBB0219DF7748008E4C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FBB0119DF7748008E4C8D /* AppDelegate.swift */; };
 		186FBB0419DF7748008E4C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FBB0319DF7748008E4C8D /* ViewController.swift */; };
 		186FBB0719DF7748008E4C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186FBB0519DF7748008E4C8D /* Main.storyboard */; };
@@ -16,7 +18,9 @@
 		186FBB0C19DF7748008E4C8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186FBB0A19DF7748008E4C8D /* LaunchScreen.xib */; };
 		186FBB1819DF7748008E4C8D /* Muffin_ButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186FBB1719DF7748008E4C8D /* Muffin_ButtonTests.swift */; };
 		1885A03A19F1D86900B8E754 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885A03919F1D86900B8E754 /* ShopViewController.swift */; };
-		18C0DF0B19EAE5E60034E1A6 /* factory-vector-381896.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C0DF0A19EAE5E60034E1A6 /* factory-vector-381896.jpg */; };
+		87D0EA9A1AF4384C009C655F /* industria.png in Resources */ = {isa = PBXBuildFile; fileRef = 87D0EA991AF4384C009C655F /* industria.png */; };
+		87D0EA9C1AF43AB5009C655F /* background for app.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D0EA9B1AF43AB5009C655F /* background for app.jpg */; };
+		87D0EA9E1AF43BF5009C655F /* Muffin1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87D0EA9D1AF43BF5009C655F /* Muffin1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1826A6B71ABCD8F000C64171 /* MBDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MBDataController.swift; path = ../MBDataController.swift; sourceTree = "<group>"; };
 		18295F2A19E8A93600ED2831 /* Muffin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Muffin.jpg; path = Images.xcassets/Muffin.jpg; sourceTree = "<group>"; };
 		18295F2C19E8AB8900ED2831 /* Made20bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Made20bacon.png; sourceTree = "<group>"; };
+		186016011A7C4A5E00FD48CB /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		186FBAFC19DF7748008E4C8D /* Muffin Button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muffin Button.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		186FBB0019DF7748008E4C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186FBB0119DF7748008E4C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +49,9 @@
 		186FBB1619DF7748008E4C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186FBB1719DF7748008E4C8D /* Muffin_ButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muffin_ButtonTests.swift; sourceTree = "<group>"; };
 		1885A03919F1D86900B8E754 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		18C0DF0A19EAE5E60034E1A6 /* factory-vector-381896.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "factory-vector-381896.jpg"; sourceTree = "<group>"; };
+		87D0EA991AF4384C009C655F /* industria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = industria.png; sourceTree = "<group>"; };
+		87D0EA9B1AF43AB5009C655F /* background for app.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background for app.jpg"; sourceTree = "<group>"; };
+		87D0EA9D1AF43BF5009C655F /* Muffin1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Muffin1.jpg; path = Images.xcassets/Muffin1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,9 @@
 		18295F2919E8A8D700ED2831 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				18C0DF0A19EAE5E60034E1A6 /* factory-vector-381896.jpg */,
+				87D0EA9B1AF43AB5009C655F /* background for app.jpg */,
+				87D0EA991AF4384C009C655F /* industria.png */,
+				87D0EA9D1AF43BF5009C655F /* Muffin1.jpg */,
 				18295F2C19E8AB8900ED2831 /* Made20bacon.png */,
 				18295F2A19E8A93600ED2831 /* Muffin.jpg */,
 			);
@@ -97,11 +107,13 @@
 			children = (
 				186FBB0119DF7748008E4C8D /* AppDelegate.swift */,
 				186FBB0319DF7748008E4C8D /* ViewController.swift */,
+				1826A6B71ABCD8F000C64171 /* MBDataController.swift */,
 				186FBB0519DF7748008E4C8D /* Main.storyboard */,
 				186FBB0819DF7748008E4C8D /* Images.xcassets */,
 				186FBB0A19DF7748008E4C8D /* LaunchScreen.xib */,
-				186FBAFF19DF7748008E4C8D /* Supporting Files */,
 				1885A03919F1D86900B8E754 /* ShopViewController.swift */,
+				186016011A7C4A5E00FD48CB /* DataController.swift */,
+				186FBAFF19DF7748008E4C8D /* Supporting Files */,
 			);
 			path = "Muffin Button";
 			sourceTree = "<group>";
@@ -212,11 +224,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D0EA9E1AF43BF5009C655F /* Muffin1.jpg in Resources */,
 				186FBB0719DF7748008E4C8D /* Main.storyboard in Resources */,
 				186FBB0C19DF7748008E4C8D /* LaunchScreen.xib in Resources */,
 				18295F2B19E8A93600ED2831 /* Muffin.jpg in Resources */,
+				87D0EA9A1AF4384C009C655F /* industria.png in Resources */,
 				186FBB0919DF7748008E4C8D /* Images.xcassets in Resources */,
-				18C0DF0B19EAE5E60034E1A6 /* factory-vector-381896.jpg in Resources */,
+				87D0EA9C1AF43AB5009C655F /* background for app.jpg in Resources */,
 				18295F2D19E8AB8900ED2831 /* Made20bacon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				186FBB0419DF7748008E4C8D /* ViewController.swift in Sources */,
+				186016021A7C4A5E00FD48CB /* DataController.swift in Sources */,
 				186FBB0219DF7748008E4C8D /* AppDelegate.swift in Sources */,
+				1826A6B81ABCD8F000C64171 /* MBDataController.swift in Sources */,
 				1885A03A19F1D86900B8E754 /* ShopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
